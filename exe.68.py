@@ -1,0 +1,14 @@
+from random import randint
+ganhou = ''
+while True:
+    jogador = int(input('Escolha um numero: '))
+    computador = randint(0, 11)
+    total = jogador + computador
+    if jogador == 'P':
+        par = jogador % 2 == 0
+        print('O JOGADOR JOGOU {par}')
+    elif computador == 'I':
+        impar = computador % 3 == 1
+        print(f'O COMPUTADOR JOGOU {impar}')
+    print(f' {total}')
+    while jogador != ganhou:
