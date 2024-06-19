@@ -1,33 +1,36 @@
-v1 = int(input('Digite o primeiro valor: '))
-v2 = int(input('Digite o segundo valor: '))
-opção = 0
-while opção != 5:
-    print('''
-    [ 1 ] Somar
-    [ 2 ] Multiplicar
-    [ 3 ] Maior
-    [ 4 ] Novos Números 
-    [ 5 ] Sair do programa''')
-    opção = int(input('Qual sua opção ? '))
+# Criando um Menu de Opções
+
+v1 = int(input('Primeiro Valor: '))
+v2 = int(input('Segundo valor: '))
+
+while True:
+    print("""
+    [1] SOMAR
+    [2] MULTIPLICAR
+    [3] MAIOR
+    [4] NOVOS NÚMEROS
+    [5] SAIR DO PROGRAMA
+    """)
+
+    opção = int(input('Digite uma opção:'))
+
     if opção == 1:
-        soma =  v1 + v2
-        print('A soma é {}'.format(soma))
+        soma = v1 + v2
+        print('A soma entre {} + {} é {}'.format(v1, v2, soma))
     elif opção == 2:
         multiplicação = v1 * v2
-        print('O resultado da multiplicação é {}'.format(multiplicação))
+        print('O resultado de {} x {} é {}'.format(v1, v2, multiplicação))
     elif opção == 3:
-        if v1 > v2:
-            maior = v1
-        else:
-            maior = v2
-            print('O maior número é {}'.format(maior))
+        maior = max(v1, v2)
+        print('O maior número entre {} e {} é {}'.format(v1, v2, maior))
     elif opção == 4:
-        numeronovo = int(input('Digite outros números: '))
-        v1 = int(input('Digite o primeiro valor: '))
-        v2 = int(input('Digite o segundo valor: '))
+        print('Informa os números novamente')
+        v1 = int(input('Primeiro valor: '))
+        v2 = int(input('Segundo Valor: '))
     elif opção == 5:
-        print('Finalizando...')
+        print('FINALIZANDO...')
+        break
     else:
-        print('Opção Inválida ! ')
-    print('=-=' * 10)
-print('Fim do Programa !! ')
+        print('OPÇÃO INVÁLIDA. TENTE NOVAMENTE')
+print('FIM DO PROGRAMA! VOLTE SEMPRE! ')
+
